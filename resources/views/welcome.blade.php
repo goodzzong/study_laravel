@@ -1,5 +1,12 @@
-<h1>
+@extends('layouts.mater')
 
-    <?=isset($greeting)? "{$greeting}" : 'hello';?><?=$name;?>
+@section('content')
+    @include('partials.footer')
+@endsection
 
-</h1>
+@section('script')
+    <script>
+        alert("저는 자식 뷰의  'script' 섹션입니다. ");
+    </script>
+@endsection
+

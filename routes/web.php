@@ -37,16 +37,22 @@ Route::get('/', function () {
     return view('errors.503');
 
 });
-*/
+
 
 Route::get('/', function () {
     return view('welcome')->with(
         [
-            'name' => 'foo',
-            'greeting' => '안녕하세요'
+            'itemCount' => 3,
+            'items' => [1,2,3]
 
         ]
 
     );
+
+});
+*/
+
+Route::get('/', function () {
+    return view('welcome');
 
 });
