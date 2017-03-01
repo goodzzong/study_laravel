@@ -11,6 +11,23 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+/*
+Route::get('/{data?}', function ($data='bar') {
+    //return view('welcome');
+    return $data;
+});
+*/
+
+Route::get('/', [
+   'as' => 'good',
+    function(){
+        return '제 이름은 good 입니다.';
+    }
+
+]);
+
+Route::get('/good', function () {
+    //return view('welcome');
+    return redirect(route('good'));
 });
