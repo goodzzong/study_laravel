@@ -1,6 +1,7 @@
 @extends('layouts.mater')
 
 @section('content')
+    <a href="{{ route('names') }}">그리팅으로 갑니다.</a>
     @include('partials.footer')
 @endsection
 
